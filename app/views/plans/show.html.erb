@@ -1,0 +1,395 @@
+<script src="http://code.jquery.com/jquery-1.6.2.min.js"></script>
+<script>
+
+$(document).ready(function() {
+
+
+  $('#first').click(function(e){
+    e.preventDefault();
+    $('#picture').html($('#first').html());
+    $('#picture').show('slide', {
+      direction: "left"
+
+    }, 2000);
+});
+
+$('#elevation').click(function(e){
+  e.preventDefault();
+    $('#picture').html($('#elevation').html());
+    $('#picture').show('slide', {
+      direction: "left"
+
+    }, 2000);
+
+
+});
+
+$('#second').click(function(e){
+  e.preventDefault();
+    $('#picture').html($('#second').html());
+    $('#picture').show('slide', {
+      direction: "left"
+
+    }, 2000);
+
+
+});
+
+  $('#image').click(function(e){
+    e.preventDefault();
+    $('#picture').html($('#image').html());
+    $('#picture').show("fast");
+});
+
+$('#image2').click(function(e){
+  e.preventDefault();
+    $('#picture').html($('#image2').html());
+    $('#picture').show("fast");
+
+
+});
+
+$('#image3').click(function(e){
+  e.preventDefault();
+    $('#picture').html($('#image3').html());
+    $('#picture').show("fast");
+
+
+});
+$('#image4').click(function(e){
+  e.preventDefault();
+    $('#picture').html($('#image4').html());
+    $('#picture').show("fast");
+
+
+});
+
+$('#image5').click(function(e){
+  e.preventDefault();
+    $('#picture').html($('#image5').html());
+    $('#picture').show("fast");
+
+
+});
+$('#image6').click(function(e){
+  e.preventDefault();
+    $('#picture').html($('#image6').html());
+    $('#picture').show("fast");
+
+
+});
+$('#image7').click(function(e){
+  e.preventDefault();
+    $('#picture').html($('#image7').html());
+    $('#picture').show("fast");
+
+
+});
+$('#image8').click(function(e){
+  e.preventDefault();
+    $('#picture').html($('#image8').html());
+    $('#picture').show("fast");
+
+
+});
+$('#image9').click(function(e){
+  e.preventDefault();
+    $('#picture').html($('#image9').html());
+    $('#picture').show("fast");
+
+
+});
+$('#image10').click(function(e){
+  e.preventDefault();
+    $('#picture').html($('#image10').html());
+    $('#picture').show("fast");
+
+
+});
+$('#image11').click(function(e){
+  e.preventDefault();
+    $('#picture').html($('#image11').html());
+    $('#picture').show("fast");
+
+
+});
+$('#image12').click(function(e){
+  e.preventDefault();
+    $('#picture').html($('#image12').html());
+    $('#picture').show("fast");
+
+
+});
+$('#image11').click(function(e){
+  e.preventDefault();
+    $('#picture').html($('#image11').html());
+    $('#picture').show("fast");
+
+
+});
+  });
+
+
+</script>
+<script>
+$(document).ready(function() {
+  $('#picture').click
+
+</script>
+<script>
+$(document).ready(function() {
+$( ".up" ).click(function() {
+  $( "#firstgroup" ).toggle( "fast") 
+  $("#secondgroup").toggle("fast")
+   $("#secondgroup_icon").toggle("fast")
+  $("#firstgroup_icon").toggle("fast")
+  $("#down1_icon").toggle("fast")
+  $("#down2_icon").toggle("fast")
+
+
+  });
+$( ".down" ).click(function() {
+  $( "#firstgroup" ).toggle( "fast") 
+  $("#secondgroup").toggle("fast")
+  $("#down1_icon").toggle("fast")
+  $("#down2_icon").toggle("fast")
+  $("#firstgroup_icon").toggle("fast")
+  $("#secondgroup_icon").toggle("fast")
+  
+
+  });
+$( ".down2" ).click(function() {
+  $( "#secondgroup" ).toggle( "fast") 
+  $("#thirdgroup").toggle("fast")
+  $("#down3_icon").toggle("fast")
+  $("#down2_icon").toggle("fast")
+  $( "#secondgroup_icon" ).toggle( "fast") 
+  $("#thirdgroup_icon").toggle("fast")
+
+  });
+$( ".up2" ).click(function() {
+  $( "#secondgroup" ).toggle( "fast") 
+  $("#thirdgroup").toggle("fast")
+  $( "#secondgroup_icon" ).toggle( "fast") 
+  $("#thirdgroup_icon").toggle("fast")
+  $("#down3_icon").toggle("fast")
+  $("#down2_icon").toggle("fast")
+
+  });
+$( ".down3" ).click(function() {
+  $( "#thirdgroup" ).toggle( "fast") 
+  $("#fourthgroup").toggle("fast")
+
+  });
+$( ".up3" ).click(function() {
+  $( "#fourthgroup" ).toggle( "fast") 
+  $("#thirdgroup").toggle("fast")
+
+  });
+});
+</script>
+
+<p id="notice"><%= notice %></p>
+<div class="container">
+<div class="row">
+
+<div id="plan" class="col-md-9">
+<div id="picture">
+<center><%= link_to image_tag(@plan.drawing_1.url(:full)), new_plan_saved_plan_path(@plan) %></center>
+</div>
+<center>
+<br /><br />
+
+    <% unless @plan.name.blank? %>
+    <p>
+      <b>Name:</b>
+      <%= @plan.name %> |
+
+    <% end %>
+
+      <b>Sqfoot:</b>
+      <%= @plan.sqfoot %> |
+
+      <b>Bedrooms:</b>
+      <%= @plan.bedrooms %> |
+
+      <b>Bathrooms:</b>
+      <%= @plan.bathrooms %> |
+
+      <% unless @plan.half_bath.blank? %>
+
+      <b>Half bath:</b>
+      <%= @plan.half_bath %> 
+
+      <% end %>
+
+    <p>
+      <b>Living:</b>
+      <%= @plan.living %> |
+
+      <b>Dining:</b>
+      <%= @plan.dining %> |
+
+      <b>Levels:</b>
+      <%= @plan.levels %>
+
+    <% unless @plan.view.blank? %>
+
+      <b>View:</b>
+      <%= @plan.view %> |
+
+    <% end %>
+    <% unless @plan.width.blank? %>
+
+      <b>Width:</b>
+      <%= @plan.width %> |
+
+    <% end %>
+    <% unless @plan.depth.blank? %>
+
+      <b>Depth:</b>
+      <%= @plan.depth %> 
+
+    <% end %>
+
+  </center>
+    <% if user_signed_in? %>
+<% if @plan.accessible_to_user_by_saved?(current_user) %>
+<center><%= link_to "More Info", new_plan_saved_plan_path(@plan), class: "btn btn-primary" %></center>
+<% else %>
+<center><%= link_to "More Info & Save Plan", new_plan_saved_plan_path(@plan), class: "btn btn-primary" %></center>
+<% end %>
+<% end %>
+    
+    <center><b><%= link_to "Print Brochure Set", @plan.broshure.url, class: "btn btn-primary", format: "pdf", :target => '_blank' %>
+
+    </b><br /><br /></center>
+
+
+  </div>
+  
+
+<div class="well col-md-2">
+  <div id="slide_icons_up">
+    <center>
+    <!--<icon id="firstgroup_icon" class="up-max-icon fa fa-chevron-up"></icon> -->
+    <icon id="secondgroup_icon" class="up fa fa-chevron-up"></icon>
+    <icon id="thirdgroup_icon" class="up2 fa fa-chevron-up"></icon>
+  </center>
+  </div>
+    <div id="slides">
+    <div id="firstgroup">
+    <div id="first">
+    <p><%= link_to image_tag(@plan.drawing_1.url(:full)), new_plan_saved_plan_path(@plan) %></p>
+  </div>
+    <% unless @plan.drawing_2.blank? %>       
+    <p>
+      <b>Secondary View:</b>
+      <div id="second">
+      <%= link_to image_tag(@plan.drawing_2.url(:full)), new_plan_saved_plan_path(@plan) %>
+    </div>
+    </p>
+
+    <% end %>
+
+    <p>
+      <b>Elevation View:</b>
+      <div id="elevation">
+      <%= link_to image_tag(@plan.elevation.url(:full)), new_plan_saved_plan_path(@plan) %>
+      </div>
+    </p>
+  <% unless @plan.image.blank? %>   
+  <pic id="image">
+    <%= image_tag(@plan.image) %>
+  </pic>
+  <% end %>
+</div>
+<div id="secondgroup">
+  <pic id="image2">
+      <%= image_tag(@plan.image2) %>
+  </pic>
+
+  <pic id="image3">
+    <%= image_tag(@plan.image3) %> 
+  </pic>
+
+  <pic id="image4">
+    <%= image_tag(@plan.image4) %>
+  </pic>
+  
+  <pic id="image5">
+  <%= image_tag(@plan.image5) %>
+</pic>
+</div>
+<div id="thirdgroup">
+  <pic id="image6">
+  <%= image_tag(@plan.image6) %>
+</pic>
+<pic id="image7">
+  <%= image_tag(@plan.image7) %>
+</pic>
+
+<pic id="image8">
+  <%= image_tag(@plan.image8) %>
+</pic>
+
+
+<pic id="image9">
+  <%= image_tag(@plan.image9) %>
+</pic>
+</div>
+<div id="fourthgroup">
+<pic id="image10">
+  <%= image_tag(@plan.image10) %>
+</pic>
+<pic id="image11">
+  <%= image_tag(@plan.image11) %>
+</pic>
+<pic id="image12">
+  <%= image_tag(@plan.image12) %>
+</pic>
+<% if user_signed_in? %>
+<% if @plan.accessible_to_user_by_saved?(current_user) %>
+<center><%= link_to "More Info", new_plan_saved_plan_path(@plan), class: "btn btn-primary" %></center>
+<% else %>
+<center><%= link_to "More Info & Save Plan", new_plan_saved_plan_path(@plan), class: "btn btn-primary" %></center>
+<% end %>
+<% end %>
+    
+    <center><b><%= link_to "Print Brochure Set", @plan.broshure.url, class: "btn btn-primary", format: "pdf", :target => '_blank' %>
+
+    </b><br /><br /></center>
+</div>
+</div>
+<div id="slide_icons_down">
+  <center>
+    <% if @plan.image2.blank? %>
+    <icon id="down3_icon" class="down_max fa fa-chevron-down"></icon>
+    <% else %>
+    <icon id="down1_icon" class="down fa fa-chevron-down"></icon>
+    <% end %>
+    <% if @plan.image6.blank? %>
+    <icon id="down3_icon" class="down_max fa fa-chevron-down"></icon>
+    <% else %>
+    <icon id="down2_icon" class="down2 fa fa-chevron-down"></icon>
+    <% end %>
+    <icon id="down3_icon" class="down_max fa fa-chevron-down"></icon>
+  </center>
+  </div>
+</div>
+
+<div class="buttons span12">
+  <back>
+  <p><INPUT Type="button" VALUE="Back To Search" onClick="history.go(-1);return true;" class=".btn .btn-primary"></p>
+  </back>
+  <% if user_signed_in? %>
+  <% if current_user.has_role? :admin %>
+<%= link_to 'Edit', edit_plan_path(@plan), class: "btn btn-large btn-primary" %> <%= link_to 'New Plan', new_plan_path, class: "btn btn-large btn-primary" %> <br />
+<% end %>
+<% end %>
+
+  <br /><br /><br /><br />
+</div>
+</div>
+</div>
+<%= render 'layouts/footer' %>

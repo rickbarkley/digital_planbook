@@ -1,0 +1,98 @@
+// Place all the styles related to the plans controller here.
+// They will automatically be included in application.css.
+// You can use Sass (SCSS) here: http://sass-lang.com/
+.border {
+border-top: 2px solid #888;
+margin-left: -5px;
+align: center;
+
+}
+#searchfield {
+display: block;
+
+margin-left:30px;
+line-height:1.5em;
+
+
+}
+
+#searchfield2 {
+display: block;
+margin-left:40px;
+line-height:1.5em;
+
+}
+#searchfield p{
+    font-size: 16px;
+}
+
+#searchfield2 p{
+    font-size: 16px;
+}
+
+
+
+#image_index {
+margin-right: 30px;
+float: right !important;
+}
+
+#image_index img {
+box-shadow: 5px 5px 5px #888 !important;
+position: relative;
+
+margin-right: 20px;
+margin-top: 10px;
+margin-bottom: 10px;
+-webkit-border-radius: 6px 6px 6px 6px;
+ -moz-border-radius: 6px 6px 6px 6px;
+ border-radius: 6px 6px 6px 6px;
+}
+
+
+h3 a {
+color: #000;
+}
+
+#filter-search {
+    display:none;
+    margin-bottom: 30px;
+
+}
+#secondgroup {
+    display:none;
+}
+#thirdgroup {
+    display:none;
+}
+#fourthgroup {
+    display:none;
+}
+#secondgroup_icon {
+    display:none;
+}
+#thirdgroup_icon {
+    display:none;
+}
+#down2_icon {
+    display:none;
+}
+#down3_icon {
+    display:none;
+}
+#firstgroup_icon {
+	display: none;
+}
+#slide_icons_up {
+padding-top: 10px;
+font-size:135%;
+	
+} 
+#slide_icons_down {
+padding-bottom: 10px;
+font-size:135%;	
+} 
+
+#slides img {
+	margin:10px;
+}

@@ -1,0 +1,16 @@
+
+<div class="container">
+  <div class="row">
+  	
+		<center><h3>Saved Plans for <%= @user.email %> </h3></center><br /><br />
+		<div id="savedplans" class="col-md-5 col-md-offset-1">
+			<% unless @user.saved_plans.empty? %>
+			<% @user.saved_plans.each do |saved_plan| %>
+			<h4>Plan Name: <%= link_to saved_plan.plan.name, saved_plan.plan %></h4>
+			<h4><%= link_to image_tag(saved_plan.plan.drawing_1.url(:preview)), saved_plan.plan %></h4>
+			<%= link_to 'Delete from saved plans', saved_plan, method: :delete, data: { confirm: 'Are you sure?' } %>
+			  <% end %>
+			<% end %>
+		</div>
+	</div>
+</div>
