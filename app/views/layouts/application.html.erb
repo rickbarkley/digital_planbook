@@ -7,7 +7,7 @@
     <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
     <script src="https://code.jquery.com/jquery.js"></script>
     <!-- Include all compiled plugins (below), or include individual files as needed -->
-    <title><%= content_for?(:title) ? yield(:title) : "Design Visions" %></title>
+    <title><%= content_for?(:title) ? yield(:title) : "architectWare Demo" %></title>
     <%= javascript_include_tag "application" %>
     <%= csrf_meta_tags %>
     
@@ -52,9 +52,9 @@
       <span class="icon-bar"></span>
     </button>
     <% if user_signed_in? %>
-    <a class="navbar-brand" href="/plans">Design Visions</a>
+    <a class="navbar-brand" href="/plans">Digital Planbook Demo</a>
     <% else %>
-    <a class="navbar-brand" href="/">Design Visions</a>
+    <a class="navbar-brand" href="/">Digital Planbook Demo</a>
     <% end %>
   </div>
 
@@ -75,8 +75,8 @@
     </ul>
     
     <ul class="nav navbar-nav navbar-right">
-      <li><a href="/contact">Contact</a></li>
-      <li><%= link_to "Website", "http://www.designvisionsofaustin.com" %></li> 
+      <li><a href="http://www.architectware.com/contact">Contact</a></li>
+      <li><%= link_to "Website", "http://www.architectware.com" %></li> 
     </ul>
   </div><!-- /.navbar-collapse -->
 </nav>
