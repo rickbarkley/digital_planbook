@@ -58,9 +58,9 @@ class Plan < ActiveRecord::Base
   attr_accessible :bathrooms, :bedrooms, :drawing_1, :drawing_2, :elevation, :drawing_1_file_name, :drawing_1_content_type, :drawing_1_file_size, :drawing_1_updated_at, 
   				:casita, :court, :depth, :dining, :garage, :garage_loc, :half_bath, :levels, :living, :media_string, :name, :sqfoot, :study, :style, :suite, :view, :width,
   				:broshure_file_name, :broshure_content_type, :broshure_file_size, :broshure_updated_at, :broshure, :image, :image2, :image3, :image4, :image5,:image6, :image7, :image8, :image9, :image10, :image11, :image12  
-  has_attached_file :drawing_1,  :styles => { :full => ["2400x2400>", :jpg], :preview => ["365x365>", :jpg], :thumb => ["150x150>", :jpg] }
-  has_attached_file :drawing_2,  :styles => { :full => ["2400x2400>", :jpg], :preview => ["365x365>", :jpg], :thumb => ["150x150>", :jpg] }
-  has_attached_file :elevation,  :styles => { :full => ["2400x2400>", :jpg], :preview => ["365x365>", :jpg], :thumb => ["150x150>", :jpg] }
+  has_attached_file :drawing_1,  :convert_options => { :all => "-blur 0x8" }, :styles => { :full => ["2400x2400>", :jpg], :preview => ["365x365>", :jpg], :thumb => ["150x150>", :jpg] }
+  has_attached_file :drawing_2,  :convert_options => { :all => "-blur 0x8" }, :styles => { :full => ["2400x2400>", :jpg], :preview => ["365x365>", :jpg], :thumb => ["150x150>", :jpg] }
+  has_attached_file :elevation,  :convert_options => { :all => "-blur 0x8" }, :styles => { :full => ["2400x2400>", :jpg], :preview => ["365x365>", :jpg], :thumb => ["150x150>", :jpg] }
   has_attached_file :broshure 
 
   mount_uploader :image, PortfolioUploader
