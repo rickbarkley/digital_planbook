@@ -32,5 +32,5 @@ class User < ActiveRecord::Base
   attr_accessible :email, :name, :password, :password_confirmation, :remember_me, :role_ids
   # attr_accessible :title, :body
 
-  validates :name, :presence   => true
+  #validates :name, :presence   => true
 end
