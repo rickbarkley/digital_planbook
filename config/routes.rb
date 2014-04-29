@@ -16,19 +16,21 @@ resources :saved_plans
   resources :plans do
     resources :saved_plans
   end
+get '/admin' => 'pages#admin'
+get '/contact' => 'pages#contact'
 
-  match '/contact', :to => 'pages#contact'
-  match '/admin', :to => 'pages#admin'
-    
-    authenticated :user do
-    root :to => 'plans#index'
-  end
 
-  #root :to => 'devise#registrations'
+#    authenticated :user do
+#    root :to => 'plans#index'
+#   end
 
-  devise_scope :user do
-  root to: "devise/sessions#new"
-end
+
+  root :to => 'pages#home'
+
+#  devise_scope :user do
+#  root to: "devise/sessions#new"
+#end
+
 
 namespace :admin do
     resources :users # Have the admin manage them here.
