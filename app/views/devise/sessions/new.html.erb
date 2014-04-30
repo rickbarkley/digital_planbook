@@ -46,13 +46,13 @@
             <div><p><%= f.check_box :remember_me %> <%= f.label :remember_me %></p></div>
           <% end -%>
 
-          <div><%= f.submit "Sign in", :class => "btn" %></div>
+          <div><%= f.submit "Sign in", :class => "btn btn-primary" %><br /><br /></div>
         <% end %>
 
         <P><%= render "devise/shared/links" %></p>
 				<p class="codrops-demos">
-					<center><a href="/plans", class="btn">Advanced Plan Search</a>
-					<a href="/contact", class="btn">Request a Quote</a></center>
+					<center><a href="/plans", class="btn btn-primary">Advanced Plan Search</a>
+					<a href="http://www.architectware.com/pricing" class="btn btn-primary">Planbook Pricing</a>
 					<!--<a href="index4.html">Contact Us</a>-->
 				</p>
             </header>

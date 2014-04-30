@@ -255,9 +255,9 @@ $( ".up3" ).click(function() {
   </center>
     <% if user_signed_in? %>
 <% if @plan.accessible_to_user_by_saved?(current_user) %>
-<center><%= link_to "More Info", new_plan_saved_plan_path(@plan), class: "btn btn-primary" %></center>
+<center><%= link_to "More Info", new_plan_saved_plan_path(@plan), class: "btn btn-primary" %><br /><br /></center>
 <% else %>
-<center><%= link_to "More Info & Save Plan", new_plan_saved_plan_path(@plan), class: "btn btn-primary" %></center>
+<center><%= link_to "More Info & Save Plan", new_plan_saved_plan_path(@plan), class: "btn btn-primary" %><br /><br /></center>
 <% end %>
 <% end %>
     
@@ -270,6 +270,13 @@ $( ".up3" ).click(function() {
   
 
 <div class="well col-md-2">
+  <% if user_signed_in? %>
+<% if @plan.accessible_to_user_by_saved?(current_user) %>
+<center><%= link_to "More Info", new_plan_saved_plan_path(@plan), class: "btn btn-primary" %></center>
+<% else %>
+<center><%= link_to "More Info & Save Plan", new_plan_saved_plan_path(@plan), class: "btn btn-primary" %></center>
+<% end %>
+<% end %>
   <div id="slide_icons_up">
     <center>
     <!--<icon id="firstgroup_icon" class="up-max-icon fa fa-chevron-up"></icon> -->
@@ -348,17 +355,7 @@ $( ".up3" ).click(function() {
 <pic id="image12">
   <%= image_tag(@plan.image12) %>
 </pic>
-<% if user_signed_in? %>
-<% if @plan.accessible_to_user_by_saved?(current_user) %>
-<center><%= link_to "More Info", new_plan_saved_plan_path(@plan), class: "btn btn-primary" %></center>
-<% else %>
-<center><%= link_to "More Info & Save Plan", new_plan_saved_plan_path(@plan), class: "btn btn-primary" %></center>
-<% end %>
-<% end %>
-    
-    <center><b><%= link_to "Print Brochure Set", @plan.broshure.url, class: "btn btn-primary", format: "pdf", :target => '_blank' %>
 
-    </b><br /><br /></center>
 </div>
 </div>
 <div id="slide_icons_down">
@@ -378,9 +375,11 @@ $( ".up3" ).click(function() {
   </div>
 </div>
 
+
+
 <div class="buttons span12">
   <back>
-  <p><INPUT Type="button" VALUE="Back To Search" onClick="history.go(-1);return true;" class=".btn .btn-primary"></p>
+  <p><INPUT Type="button" VALUE="Back To Search" onClick="history.go(-1);return true;" class="btn btn-primary"></p>
   </back>
   <% if user_signed_in? %>
   <% if current_user.has_role? :admin %>

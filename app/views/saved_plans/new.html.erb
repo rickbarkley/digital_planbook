@@ -14,15 +14,15 @@ Plan Already Saved
 			  
 
 			  <div class="form-actions">
-		<h4>Would you like to save this Plan? <%= f.submit "Yes", class: "btn btn-primary btn-large" %>  <%= link_to "Back to Search", plans_path, class: "btn btn-primary btn-large" %></h4>
+		<h4>Would you like to save this Plan? <%= f.submit "Yes", class: "btn btn-primary" %>  <%= link_to "Back to Search", plans_path, class: "btn btn-primary" %></h4>
 			  </div>
 			<% end %>
 		</div>
 		<% end %>
 		<% end %>
 
-<%= image_tag(@plan.drawing_1.url) %><br /><br />
-<%= image_tag(@plan.drawing_2.url) %><br /><br />
-<%= image_tag(@plan.elevation.url) %><br /><br />
+<%= image_tag(@plan.drawing_1.url(:full)) %><br /><br />
+<%= image_tag(@plan.drawing_2.url(:full)) %><br /><br />
+<%= image_tag(@plan.elevation.url(:full)) %><br /><br />
 
 <%= render 'layouts/footer' %>
