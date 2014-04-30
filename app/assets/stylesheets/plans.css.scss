@@ -96,3 +96,27 @@ font-size:135%;
 #slides img {
 	margin:10px;
 }
+
+#picture img{
+border-radius: 6px 6px 6px 6px;
+box-shadow: 5px 5px 5px #888 !important;    
+}
+
+pic img{
+    text-align: cnter;
+    display: inline-block;
+    margin:8px;
+    -webkit-border-radius: 6px 6px 6px 6px;
+     -moz-border-radius: 6px 6px 6px 6px;
+     border-radius: 6px 6px 6px 6px;
+     box-shadow: 3px 3px 3px #888 !important;
+}
+
+.well {
+    
+    border: solid #888 1px !important;
+}
+
+#sort a {
+    color: #15317E;
+}

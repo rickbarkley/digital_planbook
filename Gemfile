@@ -19,6 +19,7 @@ gem "fog"
 gem "simple_form"
 gem 'carrierwave'
 gem 'protected_attributes'
+gem 'active_attr'
 
 
 # Gems used only for assets and not required
