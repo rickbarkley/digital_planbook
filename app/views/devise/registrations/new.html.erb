@@ -32,7 +32,7 @@
                 <!--<h2>Digital Planbook</h2>-->
                 <div id="side-text" class="col-md-4 pull-right">
             <h3><center><%= image_tag("logodemo.jpg") %></center></h3>
-		<h1>Sign up</h1>
+		<h2>Please Sign Up To View Plans</h2>
 
 		<%= form_for(resource, :as => resource_name, :url => registration_path(resource_name)) do |f| %>
 		  <%= devise_error_messages! %>
@@ -48,7 +48,7 @@
 		  <div><P><%= f.label :password_confirmation %></p>
 		  <p><%= f.password_field :password_confirmation %></p></div>
 
-		  <div><p><%= f.submit "Sign up", :class => "btn btn-primary" %></p></div>
+		  <div><p> <%= f.submit "Sign up", :class => "btn btn-primary" %></p></div>
 		<% end %>
 
 		<p>Already have an account? <%= render "devise/shared/links" %></p><br /><br />
