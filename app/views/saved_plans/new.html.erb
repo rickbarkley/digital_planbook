@@ -2,7 +2,7 @@
 	
 <% if user_signed_in? %>
 	<% else %>
-	<h2>To save plan you must be Logged In <%= link_to 'Login', new_user_session_path, class: "btn btn-primary" %></h2>
+	<center><h2>To save plan you must be Logged In <%= link_to 'Login', new_user_session_path, class: "btn btn-primary" %></h2></center>
 		<% end %>
 	<% if user_signed_in? %>
 <% if @plan.accessible_to_user_by_saved?(current_user) %>
