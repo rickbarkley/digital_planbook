@@ -1,5 +1,5 @@
 class SavedPlansController < ApplicationController
-	#before_filter :authenticate_user! 
+	before_filter :authenticate_user!,  :only => [:create]  
   # GET /registers
   # GET /registers.json
   def index
